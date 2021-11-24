@@ -1,7 +1,5 @@
 
-
-
-public class MyArrayList<T> implements MyArrayInterface<T>{
+public class MyArrayList<T> {
         private static final int DEFAULT_LENGTH = 10;
         private static final Object[] EMPTY_ARRAY = {};
         private int size;
@@ -21,7 +19,7 @@ public class MyArrayList<T> implements MyArrayInterface<T>{
             }
         }
 
-        @Override
+
         public void add(T value) {
             if(size == myArrayList.length) {
                 Object[] newArr = new Object [myArrayList.length * 3 / 2 + 1];
@@ -32,7 +30,7 @@ public class MyArrayList<T> implements MyArrayInterface<T>{
             size++;
         }
 
-        @Override
+
         public void remove(int index) {
             if (index >= size){
                 return;
@@ -45,18 +43,18 @@ public class MyArrayList<T> implements MyArrayInterface<T>{
             myArrayList = newArr;
         }
 
-        @Override
+
         public void clear() {
             myArrayList = new Object[DEFAULT_LENGTH];;
             size = 0;
         }
 
-        @Override
+
         public int size() {
             return size;
         }
 
-        @Override
+
         public T get(int index) {
             if(index >= size) {
                 return null;
@@ -64,7 +62,7 @@ public class MyArrayList<T> implements MyArrayInterface<T>{
             return (T) myArrayList[index];
         }
 
-        @Override
+
         public String toString() {
             String arr = "[";
             for(int i = 0; i < size; i++) {

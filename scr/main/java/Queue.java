@@ -1,7 +1,3 @@
-package homework8.homework8Three;
-
-
-
 public class Queue<T> {
     private final int capacity;
     private final T[] q;

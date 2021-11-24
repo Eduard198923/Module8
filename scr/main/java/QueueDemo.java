@@ -1,5 +1,3 @@
-package homework8.homework8Three;
-
 public class QueueDemo {
     public static void main(String[] args) {
         Queue<String> queue = new Queue<String>(10);
@@ -14,9 +12,6 @@ public class QueueDemo {
         System.out.println(queue.size());
         queue.clear();
         System.out.println(queue.size());
-
-
-
 
 
     }

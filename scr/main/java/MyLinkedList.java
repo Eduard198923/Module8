@@ -1,18 +1,18 @@
 
 
 
-abstract class MyLinkedList<T> implements IMyLinked<T> {
+abstract class MyLinkedList<T>  {
 
     private Node<T> first;
     private Node<T> last;
     private int size=0;
 
-    public MyNodeList() {
+    public void MyNodeList() {
         size = 0;
     }
 
     //добавляет элемент в конец
-    @Override
+
     public void add(T value) {
         Node<T> l = last;
         Node<T> newNode = new Node<>(last, value,null);
@@ -26,7 +26,7 @@ abstract class MyLinkedList<T> implements IMyLinked<T> {
     }
 
     //удаляет элемент под индексом
-    @Override
+
     public void remove(int index) {
         int mid = size/2;
         if (mid > index) {
@@ -54,7 +54,7 @@ abstract class MyLinkedList<T> implements IMyLinked<T> {
     }
 
     //очищает коллекцию
-    @Override
+
     public void clear() {
         first = null;
         last = null;
@@ -62,13 +62,13 @@ abstract class MyLinkedList<T> implements IMyLinked<T> {
     }
 
     //возвращает размер коллекции
-    @Override
+
     public int size() {
         return size;
     }
 
     //возвращает первый элемент в очереди (FIFO)
-    @Override
+
     public T peek(){
         return first.elem;
     }
@@ -97,7 +97,7 @@ abstract class MyLinkedList<T> implements IMyLinked<T> {
         this.size = size;
     }
 
-    @Override
+
     public String toString() {
         if(size == 0){
             return "[]";
